@@ -186,7 +186,7 @@ const PROJECTS = [
   d:'A knowledge assistant that answers questions about clubs, players, transfers and trophies in Arabic or English.',
   pts:['Knowledge graph from Wikidata and Wikipedia, stored in Neo4j','LangChain GraphCypherQAChain turns questions into Cypher queries','Entity resolution with BAAI/bge-m3 for spelling variations','FastAPI backend, Arabic chat UI, Docker one-command setup'],
   tags:['Neo4j','LangChain','FastAPI','Docker']},
- {t:'Telecom Egypt (WE) Agentic RAG', c:'agents', file:'', repo:'Telecom_Egypt_Agentic_RAG_System', demo:'https://al-aasar.github.io/Telecom_Egypt_Agentic_RAG_System/',
+ {t:'Telecom Egypt (WE) Agentic RAG', c:'agents', file:'Telecom_Egypt_Agentic_RAG_System', ext:'jpg', novideo:true, repo:'Telecom_Egypt_Agentic_RAG_System', demo:'https://al-aasar.github.io/Telecom_Egypt_Agentic_RAG_System/',
   d:'A grounded chat assistant built on a crawl of the official te.eg website.',
   pts:['Crawler that respects robots.txt, chunking and storage in PostgreSQL','Hybrid retrieval: pgvector dense search + full-text search, fused with RRF','Groq LLMs with relevance threshold and prompt-injection guardrails','Chat session checkpointing with retrieval and deletion'],
   tags:['pgvector','PostgreSQL','Groq','RRF']},
@@ -217,10 +217,7 @@ const PROJECTS = [
  {t:'BMW Vehicle Sales Analysis', c:'data', file:'BMW Project', repo:'BMW_Sales_Analysis',
   d:'Exploratory analysis of a real vehicle dataset with missing values.',
   pts:['Feature engineering to infer and fill missing attributes','Global trends in manufacturer distribution and body-type popularity'],
-  tags:['Python','Pandas','EDA','Visualization']},
- {t:'World Data Analysis', c:'data', file:'World Analysis', repo:'',
-  d:'A data analysis project exploring global indicators through visuals.',
-  pts:[], tags:['Python','Data Analysis','Visualization']}
+  tags:['Python','Pandas','EDA','Visualization']}
 ];
 const CATS = {all:'All', agents:'Agents & RAG', vision:'Computer Vision', data:'Data Analysis'};
 
@@ -286,7 +283,7 @@ function drawTabs(){ $('#tabs').innerHTML = Object.entries(CATS).map(([k,v])=>`<
 function drawGrid(){
   $('#grid').innerHTML = PROJECTS.map((p,i)=>({p,i})).filter(o=>filter==='all'||o.p.c===filter).map(({p,i},n)=>`
   <button class="proj" style="animation-delay:${n*60}ms" data-i="${i}" aria-label="Open ${p.t}">
-    <div class="thumb">${initials(p.t)}${p.file?`<img src="${IMG+enc(p.file)}.png" alt="${p.t}" loading="lazy" onerror="this.remove()"><span class="play">▶</span>`:''}${p.demo?'<span class="live">● Live demo</span>':''}</div>
+    <div class="thumb">${initials(p.t)}${p.file?`<img src="${IMG+enc(p.file)}.${p.ext||'png'}" alt="${p.t}" loading="lazy" onerror="this.remove()">${p.novideo?'':'<span class="play">▶</span>'}`:''}${p.demo?'<span class="live">● Live demo</span>':''}</div>
     <div class="pbody"><h3>${p.t}</h3><p>${p.d}</p><div class="tags">${p.tags.map(t=>`<span>${t}</span>`).join('')}</div></div>
   </button>`).join('');
 }
@@ -296,7 +293,7 @@ drawTabs(); drawGrid();
 const dlg = $('#dlg'), media = $('#media');
 $('#grid').onclick = e => {
   const b = e.target.closest('.proj'); if(!b) return; const p = PROJECTS[b.dataset.i];
-  media.innerHTML = p.file ? `<video controls playsinline preload="metadata" src="${VID+enc(p.file)}.mp4"></video>` : (p.demo?'<span>This project runs as a live web app. Use the demo button below.</span>':'<span>Demo video coming soon</span>');
+  media.innerHTML = p.novideo ? `<img src="${IMG+enc(p.file)}.${p.ext||'png'}" alt="${p.t}" style="width:100%;height:100%;object-fit:cover">` : p.file ? `<video controls playsinline preload="metadata" src="${VID+enc(p.file)}.mp4"></video>` : (p.demo?'<span>This project runs as a live web app. Use the demo button below.</span>':'<span>Demo video coming soon</span>');
   const v = media.querySelector('video'); if(v) v.onerror = () => media.innerHTML = '<span>Demo video not found. Check the videos folder and file name.</span>';
   $('#mbody').innerHTML = `<h3>${p.t}</h3><p>${p.d}</p>${p.pts.length?`<ul>${p.pts.map(x=>`<li>${x}</li>`).join('')}</ul>`:''}<div class="tags" style="margin:0 0 20px">${p.tags.map(t=>`<span>${t}</span>`).join('')}</div>${p.demo?`<a class="btn primary" href="${p.demo}" target="_blank" rel="noopener">Open live demo</a> `:''}${p.repo?`<a class="btn${p.demo?'':' primary'}" href="${GH+p.repo}" target="_blank" rel="noopener">View on GitHub</a>`:''}`;
   dlg.showModal();
