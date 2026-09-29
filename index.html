@@ -8,7 +8,7 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Inter:wght@400;500;600&family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#f6f7fb;--surface:#fff;--ink:#141a33;--mute:#5b6280;--line:#e2e5f0;--accent:#3b5bff;--accent2:#12b5a5;--soft:#e9edff;--shadow:0 10px 30px -12px rgba(20,26,51,.25)}
 :root[data-theme=dark]{--bg:#0f1224;--surface:#171b33;--ink:#eef0fa;--mute:#9aa1c4;--line:#262b4d;--accent:#7b93ff;--accent2:#2dd4bf;--soft:#1f2547;--shadow:0 10px 30px -12px rgba(0,0,0,.6)}
@@ -28,6 +28,8 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:6
 .links{display:flex;gap:22px;font-size:14px;font-weight:500}
 .links a{text-decoration:none;color:var(--mute)}.links a:hover{color:var(--ink)}
 .icon-btn{border:1px solid var(--line);background:var(--surface);color:var(--ink);width:38px;height:38px;border-radius:50%;cursor:pointer;font-size:16px}
+#lang{font-size:14px;font-weight:700}
+.tools{display:flex;gap:8px;align-items:center}
 .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:999px;font-weight:600;text-decoration:none;border:1px solid var(--line);background:var(--surface);transition:transform .2s}
 .btn:hover{transform:translateY(-2px)}
 .btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
@@ -37,42 +39,42 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:6
 .hero h1{font-weight:800}
 .hero h1 .l1{display:block;font-size:clamp(24px,3.4vw,38px);color:var(--accent);margin-bottom:12px}
 .hero h1 .l2{display:block;font-size:clamp(38px,6vw,66px)}
-.caret{display:inline-block;width:3px;height:.85em;background:var(--accent);margin-left:4px;vertical-align:-.06em;animation:blink 1s steps(1) infinite}
+.caret{display:inline-block;width:3px;height:.85em;background:var(--accent);margin-inline-start:4px;vertical-align:-.06em;animation:blink 1s steps(1) infinite}
 @keyframes blink{50%{opacity:0}}
 @keyframes float{50%{transform:translateY(-10px)}}
 @keyframes pop{from{opacity:0;transform:translateY(18px)}}
-.photo{position:relative;max-width:380px;margin-left:auto;width:100%;aspect-ratio:4/5}
+.photo{position:relative;max-width:380px;margin-inline-start:auto;width:100%;aspect-ratio:4/5}
 .photo::before{content:"";position:absolute;inset:0;border-radius:28px;border:2px solid var(--accent);transform:translate(16px,16px)}
 .pimg{position:absolute;inset:0;border-radius:28px;overflow:hidden;background:linear-gradient(135deg,var(--accent),var(--accent2));display:grid;place-items:center;color:#fff;font:800 88px 'Bricolage Grotesque';box-shadow:var(--shadow);animation:float 6s ease-in-out infinite}
 .pimg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .chip{position:absolute;z-index:2;background:var(--surface);border:1px solid var(--line);box-shadow:var(--shadow);padding:6px 14px;border-radius:999px;font-size:13px;font-weight:600;animation:float 5s ease-in-out infinite}
 .rv{opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s}
 .rv.in{opacity:1;transform:none}
-.live{position:absolute;left:12px;top:12px;background:var(--accent2);color:#fff;font:600 12px Inter;padding:3px 10px;border-radius:999px}
+.live{position:absolute;inset-inline-start:12px;top:12px;background:var(--accent2);color:#fff;font:600 12px Inter;padding:3px 10px;border-radius:999px}
 .hero p{color:var(--mute);font-size:18px;max-width:52ch;margin:22px 0 30px}
 .cta{display:flex;flex-wrap:wrap;gap:12px}
 .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:56px}
-.stat{padding:18px 20px;border-left:3px solid var(--accent)}
+.stat{padding:18px 20px;border-inline-start:3px solid var(--accent)}
 .stat b{display:block;font:800 30px 'Bricolage Grotesque'}.stat small{color:var(--mute)}
 .about{display:grid;grid-template-columns:1.3fr 1fr;gap:48px}
 .card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:24px}
 .facts li{list-style:none;padding:10px 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:16px;font-size:15px}
 .facts li:last-child{border:0}.facts span{color:var(--mute)}
-.tl{border-left:2px solid var(--line);margin-left:6px}
-.job{position:relative;padding:0 0 34px 28px}
-.job::before{content:"";position:absolute;left:-7px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px var(--soft)}
+.tl{border-inline-start:2px solid var(--line);margin-inline-start:6px}
+.job{position:relative;padding:0 0 34px;padding-inline-start:28px}
+.job::before{content:"";position:absolute;inset-inline-start:-7px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px var(--soft)}
 .job h3{font-size:20px}.job em{display:block;color:var(--mute);font-style:normal;font-size:14px;margin:2px 0 8px}
-.job ul{padding-left:18px;color:var(--mute);font-size:15px}
+.job ul{padding-inline-start:18px;color:var(--mute);font-size:15px}
 .tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px}
 .tab{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 18px;border-radius:999px;cursor:pointer;font:500 14px Inter}
 .tab[aria-pressed=true]{background:var(--accent);border-color:var(--accent);color:#fff}
 :root[data-theme=dark] .tab[aria-pressed=true]{color:#0f1224}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:24px}
-.proj{animation:pop .5s backwards;background:var(--surface);border:1px solid var(--line);border-radius:18px;overflow:hidden;cursor:pointer;text-align:left;padding:0;color:inherit;font:inherit;transition:transform .25s,box-shadow .25s}
+.proj{animation:pop .5s backwards;background:var(--surface);border:1px solid var(--line);border-radius:18px;overflow:hidden;cursor:pointer;text-align:start;padding:0;color:inherit;font:inherit;transition:transform .25s,box-shadow .25s}
 .proj:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
 .thumb{aspect-ratio:16/10;background:linear-gradient(135deg,var(--accent),var(--accent2));position:relative;display:grid;place-items:center;color:#fff;font:800 40px 'Bricolage Grotesque'}
 .thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.play{position:absolute;right:12px;bottom:12px;width:40px;height:40px;border-radius:50%;background:rgba(20,26,51,.75);display:grid;place-items:center;font-size:14px}
+.play{position:absolute;inset-inline-end:12px;bottom:12px;width:40px;height:40px;border-radius:50%;background:rgba(20,26,51,.75);display:grid;place-items:center;font-size:14px}
 .pbody{padding:18px 20px 22px}.pbody h3{font-size:20px;margin-bottom:6px}.pbody p{color:var(--mute);font-size:14.5px}
 .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
 .tags span{background:var(--soft);color:var(--accent);font-size:12px;font-weight:600;padding:3px 10px;border-radius:999px}
@@ -80,7 +82,7 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:6
 .skills h3{font-size:18px;margin-bottom:12px}
 .chips{display:flex;flex-wrap:wrap;gap:8px}.chips span{border:1px solid var(--line);border-radius:10px;padding:4px 12px;font-size:14px;background:var(--bg)}
 .certs{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:20px}
-.cert{border:1px solid var(--line);background:var(--surface);border-radius:14px;overflow:hidden;cursor:pointer;padding:0;color:inherit;font:inherit;text-align:left}
+.cert{border:1px solid var(--line);background:var(--surface);border-radius:14px;overflow:hidden;cursor:pointer;padding:0;color:inherit;font:inherit;text-align:start}
 .cert img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;background:var(--soft)}
 .cert div{padding:12px 14px;font-size:14px;font-weight:600}
 .contact{text-align:center}
@@ -89,94 +91,104 @@ footer{padding:28px 0;text-align:center;color:var(--mute);font-size:14px;border-
 dialog{border:0;border-radius:22px;padding:0;background:var(--surface);color:var(--ink);width:min(960px,94vw);max-height:90vh;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.45)}
 #dlg[open]{display:flex;flex-direction:column}
 dialog::backdrop{background:rgba(10,12,28,.7);backdrop-filter:blur(4px)}
-.mclose{position:absolute;top:12px;right:12px;z-index:3;background:rgba(15,18,36,.7);color:#fff;border-color:transparent}
+.mclose{position:absolute;top:12px;inset-inline-end:12px;z-index:3;background:rgba(15,18,36,.7);color:#fff;border-color:transparent}
 .media{flex:none;width:100%;background:#000;aspect-ratio:16/9;max-height:58vh;display:grid;place-items:center;color:#bbb;text-align:center;padding:0 24px}
 .media video,.media img{width:100%;height:100%;object-fit:contain;display:block}
 .mbody{padding:24px 28px 30px;overflow:auto}.mbody h3{font-size:28px;margin-bottom:10px}.mbody p{color:var(--mute);margin-bottom:12px}
-.mbody ul{color:var(--mute);padding-left:20px;margin-bottom:18px}
+.mbody ul{color:var(--mute);padding-inline-start:20px;margin-bottom:18px}
 #cert-dlg{width:fit-content;max-width:94vw;background:#000}
 #cert-dlg img{display:block;max-width:94vw;max-height:90vh;width:auto;height:auto;margin:auto;object-fit:contain}
 @media(max-width:820px){.media{max-height:38vh}.mbody{padding:20px 20px 24px}.links{display:none}.hero .wrap,.about{grid-template-columns:1fr}.photo{margin:0 auto;max-width:300px}.stats{grid-template-columns:repeat(2,1fr)}section{padding:64px 0}}
+/* Arabic / RTL */
+html[lang=ar] *{font-family:'Cairo','Inter',system-ui,sans-serif!important;letter-spacing:0!important}
+html[lang=ar] body{line-height:1.85}
+html[lang=ar] h1,html[lang=ar] h2,html[lang=ar] h3{line-height:1.4}
+html[lang=ar] .hero h1 .l2{line-height:1.3}
+[dir=rtl] .photo::before{transform:translate(-16px,16px)}
 </style>
+<script>try{if(localStorage.getItem('lang')==='ar'){document.documentElement.lang='ar';document.documentElement.dir='rtl'}}catch(e){}</script>
 </head>
 <body>
 <nav><div class="wrap">
-  <a class="logo" href="#top">Muhammad Al-Aasar</a>
-  <div class="links"><a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#certificates">Certificates</a><a href="#contact">Contact</a></div>
-  <button class="icon-btn" id="theme" aria-label="Toggle dark mode">◐</button>
+  <a class="logo" href="#top" data-i18n="name">Muhammad Al-Aasar</a>
+  <div class="links"><a href="#about" data-i18n="n_about">About</a><a href="#experience" data-i18n="n_exp">Experience</a><a href="#projects" data-i18n="n_proj">Projects</a><a href="#skills" data-i18n="n_skills">Skills</a><a href="#certificates" data-i18n="n_cert">Certificates</a><a href="#contact" data-i18n="n_contact">Contact</a></div>
+  <div class="tools">
+    <button class="icon-btn" id="lang" aria-label="Switch to Arabic">ع</button>
+    <button class="icon-btn" id="theme" data-aria="a_theme" aria-label="Toggle dark mode">◐</button>
+  </div>
 </div></nav>
 
 <header class="hero" id="top"><div class="wrap">
   <div>
-    <h1><span class="l1">Hi, I'm Muhammad Al-Aasar</span><span class="l2">I build AI systems that reason, retrieve and act.</span></h1>
-    <p>I'm a Junior AI Engineer &amp; Data Analyst from Cairo. I work on Generative AI, Agentic and RAG systems, computer vision, and turning raw data into decisions.</p>
-    <div class="cta"><a class="btn primary" href="#projects">View my work</a><a class="btn" href="Muhammad_AlAasar_CV_Final.pdf" download>Download CV</a><a class="btn" href="#contact">Get in touch</a></div>
+    <h1><span class="l1" data-tw="hero1">Hi, I'm Muhammad Al-Aasar</span><span class="l2" data-tw="hero2">I build AI systems that reason, retrieve and act.</span></h1>
+    <p data-i18n="hero_p">I'm a Junior AI Engineer &amp; Data Analyst from Cairo. I work on Generative AI, Agentic and RAG systems, computer vision, and turning raw data into decisions.</p>
+    <div class="cta"><a class="btn primary" href="#projects" data-i18n="b_work">View my work</a><a class="btn" href="Muhammad_AlAasar_CV_Final.pdf" download data-i18n="b_cv">Download CV</a><a class="btn" href="#contact" data-i18n="b_touch">Get in touch</a></div>
   </div>
   <div class="photo">
-    <div class="pimg">MA<img src="Images/profile.jpeg" alt="Muhammad Al-Aasar" onerror="this.remove()"></div>
-    <span class="chip" style="left:-22px;top:14%">Generative AI</span>
-    <span class="chip" style="right:-14px;top:46%;animation-delay:-2s">RAG</span>
-    <span class="chip" style="left:-10px;bottom:12%;animation-delay:-3.5s">Agents</span>
+    <div class="pimg"><span data-i18n="ini">MA</span><img src="Images/profile.jpeg" alt="Muhammad Al-Aasar" onerror="this.remove()"></div>
+    <span class="chip" style="inset-inline-start:-22px;top:14%" data-i18n="c_gen">Generative AI</span>
+    <span class="chip" style="inset-inline-end:-14px;top:46%;animation-delay:-2s">RAG</span>
+    <span class="chip" style="inset-inline-start:-10px;bottom:12%;animation-delay:-3.5s" data-i18n="c_agents">Agents</span>
   </div>
 </div>
 <div class="wrap stats">
-  <div class="stat"><b>10+</b><small>End-to-end projects</small></div>
-  <div class="stat"><b>A+</b><small>Graduation project</small></div>
-  <div class="stat"><b>200h</b><small>Generative AI track (DEPI)</small></div>
-  <div class="stat"><b>Expert</b><small>Kaggle rank</small></div>
+  <div class="stat"><b>10+</b><small data-i18n="s1">End-to-end projects</small></div>
+  <div class="stat"><b>A+</b><small data-i18n="s2">Graduation project</small></div>
+  <div class="stat"><b data-i18n="s3b">200h</b><small data-i18n="s3">Generative AI track (DEPI)</small></div>
+  <div class="stat"><b data-i18n="s4b">Expert</b><small data-i18n="s4">Kaggle rank</small></div>
 </div></header>
 
 <section id="about"><div class="wrap about">
   <div>
-    <h2>About me</h2>
-    <p class="lead" style="max-width:none">Computer Science graduate from Tanta University with hands-on experience across Machine Learning, Deep Learning, Generative AI and Agentic/RAG systems, backed by a strong data-analysis foundation in Python, SQL and BI tools. I've shipped projects spanning computer vision, NLP, multi-agent systems, workflow automation and production-style RAG pipelines, and I led a 4-person team to an A+ graduation project.</p>
-    <p class="lead" style="max-width:none">I like building things that work end to end: from data collection and modelling to APIs, Docker and a usable interface.</p>
+    <h2 data-i18n="h_about">About me</h2>
+    <p class="lead" style="max-width:none" data-i18n="about1">Computer Science graduate from Tanta University with hands-on experience across Machine Learning, Deep Learning, Generative AI and Agentic/RAG systems, backed by a strong data-analysis foundation in Python, SQL and BI tools. I've shipped projects spanning computer vision, NLP, multi-agent systems, workflow automation and production-style RAG pipelines, and I led a 4-person team to an A+ graduation project.</p>
+    <p class="lead" style="max-width:none" data-i18n="about2">I like building things that work end to end: from data collection and modelling to APIs, Docker and a usable interface.</p>
   </div>
   <div class="card"><ul class="facts">
-    <li><span>Location</span>Cairo, Egypt</li>
-    <li><span>Degree</span>B.Sc. Computer Science, Tanta University</li>
-    <li><span>GPA</span>3.1 / 4</li>
-    <li><span>Languages</span>Arabic (native), English (professional)</li>
-    <li><span>Achievement</span>3rd place, Instant Academy Analysis competition</li>
+    <li data-i18n="f1"><span>Location</span>Cairo, Egypt</li>
+    <li data-i18n="f2"><span>Degree</span>B.Sc. Computer Science, Tanta University</li>
+    <li data-i18n="f3"><span>GPA</span>3.1 / 4</li>
+    <li data-i18n="f4"><span>Languages</span>Arabic (native), English (professional)</li>
+    <li data-i18n="f5"><span>Achievement</span>3rd place, Instant Academy Analysis competition</li>
   </ul></div>
 </div></section>
 
 <section id="experience" style="background:var(--surface);border-block:1px solid var(--line)"><div class="wrap">
-  <h2>Experience</h2><p class="lead">Internships and practical training across Generative AI, machine learning and data analysis.</p>
+  <h2 data-i18n="h_exp">Experience</h2><p class="lead" data-i18n="l_exp">Internships and practical training across Generative AI, machine learning and data analysis.</p>
   <div class="tl" id="jobs"></div>
 </div></section>
 
 <section id="projects"><div class="wrap">
-  <h2>Projects</h2><p class="lead">Select a project to watch its demo and read the details.</p>
+  <h2 data-i18n="h_proj">Projects</h2><p class="lead" data-i18n="l_proj">Select a project to watch its demo and read the details.</p>
   <div class="tabs" id="tabs"></div>
   <div class="grid" id="grid"></div>
 </div></section>
 
 <section id="skills" style="background:var(--surface);border-block:1px solid var(--line)"><div class="wrap">
-  <h2>Skills</h2><p class="lead">Tools and concepts I use day to day.</p>
+  <h2 data-i18n="h_skills">Skills</h2><p class="lead" data-i18n="l_skills">Tools and concepts I use day to day.</p>
   <div class="skills" id="skillgrid"></div>
 </div></section>
 
 <section id="certificates"><div class="wrap">
-  <h2>Certificates &amp; courses</h2><p class="lead">Select a certificate to view it in full size.</p>
+  <h2 data-i18n="h_cert">Certificates &amp; courses</h2><p class="lead" data-i18n="l_cert">Select a certificate to view it in full size.</p>
   <div class="certs" id="certs"></div>
-  <div class="card" style="margin-top:32px"><h3 style="font-size:20px;margin-bottom:8px">Courses</h3>
-    <p style="color:var(--mute);font-size:15px"><b style="color:var(--ink)">Digital Egypt Pioneers Initiative (DEPI), Generative AI Track</b> (Nov 2025 – Jul 2026): 200 hours covering ML/DL, Generative AI (VAEs, GANs, diffusion), RAG, prompt engineering and multi-agent AI.<br><br><b style="color:var(--ink)">Instant Academy, AI &amp; Data Analyst Course</b> (Oct 2024 – Jul 2025): Python, SQL, Power BI, Scikit-learn, TensorFlow/Keras, OpenCV, YOLO, NLP and Streamlit.</p></div>
+  <div class="card" style="margin-top:32px"><h3 style="font-size:20px;margin-bottom:8px" data-i18n="h_courses">Courses</h3>
+    <p style="color:var(--mute);font-size:15px" data-i18n="courses_p"><b style="color:var(--ink)">Digital Egypt Pioneers Initiative (DEPI), Generative AI Track</b> (Nov 2025 – Jul 2026): 200 hours covering ML/DL, Generative AI (VAEs, GANs, diffusion), RAG, prompt engineering and multi-agent AI.<br><br><b style="color:var(--ink)">Instant Academy, AI &amp; Data Analyst Course</b> (Oct 2024 – Jul 2025): Python, SQL, Power BI, Scikit-learn, TensorFlow/Keras, OpenCV, YOLO, NLP and Streamlit.</p></div>
 </div></section>
 
 <section id="contact" class="contact" style="background:var(--surface);border-top:1px solid var(--line)"><div class="wrap">
-  <h2>Let's work together</h2><p class="lead" style="margin-inline:auto">I'm open to AI engineering and data roles. Send me a message and I'll get back to you.</p>
+  <h2 data-i18n="h_contact">Let's work together</h2><p class="lead" style="margin-inline:auto" data-i18n="l_contact">I'm open to AI engineering and data roles. Send me a message and I'll get back to you.</p>
   <div class="cta">
-    <a class="btn primary" href="mailto:eng.mo.alaasar@gmail.com">eng.mo.alaasar@gmail.com</a>
+    <a class="btn primary" dir="ltr" href="mailto:eng.mo.alaasar@gmail.com">eng.mo.alaasar@gmail.com</a>
     <a class="btn" href="https://github.com/Al-Aasar" target="_blank" rel="noopener">GitHub</a>
     <a class="btn" href="https://linkedin.com/in/muhammad-al-aasar-455b78329" target="_blank" rel="noopener">LinkedIn</a>
-    <a class="btn" href="tel:+201015088811">+20 101 508 8811</a>
+    <a class="btn" dir="ltr" href="tel:+201015088811">+20 101 508 8811</a>
   </div>
 </div></section>
-<footer>© <span id="yr"></span> Muhammad Al-Aasar</footer>
+<footer>© <span id="yr"></span> <span data-i18n="name">Muhammad Al-Aasar</span></footer>
 
-<dialog id="dlg"><button class="icon-btn mclose" aria-label="Close">✕</button><div class="media" id="media"></div><div class="mbody" id="mbody"></div></dialog>
-<dialog id="cert-dlg"><button class="icon-btn mclose" aria-label="Close">✕</button><img id="cimg" alt=""></dialog>
+<dialog id="dlg"><button class="icon-btn mclose" data-aria="a_close" aria-label="Close">✕</button><div class="media" id="media"></div><div class="mbody" id="mbody"></div></dialog>
+<dialog id="cert-dlg"><button class="icon-btn mclose" data-aria="a_close" aria-label="Close">✕</button><img id="cimg" alt=""></dialog>
 
 <script>
 /* ===== EDIT ME: file locations in your repo (folder names are case-sensitive on GitHub Pages) ===== */
@@ -258,52 +270,162 @@ const root = document.documentElement;
 root.dataset.theme = localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme:dark)').matches ? 'dark' : 'light');
 $('#theme').onclick = () => { root.dataset.theme = root.dataset.theme==='dark'?'light':'dark'; try{localStorage.setItem('theme',root.dataset.theme)}catch(e){} };
 
-/* typewriter intro (loops forever) */
-(function(){
-  const h=$('.hero h1'),a=$('.l1'),b=$('.l2'),c=document.createElement('i'),t1=a.textContent,t2=b.textContent;
-  h.style.minHeight=h.offsetHeight+'px'; c.className='caret';
-  const na=document.createTextNode(''),nb=document.createTextNode('');
+/* ===== language (EN / AR) ===== */
+const PROJECTS_AR = [
+ {t:'Graph RAG: الدوري المصري الممتاز',
+  d:'مساعد معرفي يجيب عن أسئلة حول الأندية واللاعبين والانتقالات والبطولات بالعربية أو الإنجليزية.',
+  pts:['رسم معرفي (Knowledge Graph) من Wikidata وWikipedia مخزّن في Neo4j','LangChain GraphCypherQAChain يحوّل الأسئلة إلى استعلامات Cypher','ربط الكيانات (Entity Resolution) عبر BAAI/bge-m3 للتعامل مع اختلافات الإملاء','واجهة خلفية FastAPI وواجهة محادثة عربية وإعداد Docker بأمر واحد']},
+ {t:'Agentic RAG للمصرية للاتصالات (WE)',
+  d:'مساعد محادثة موثوق مبني على زحف (Crawl) الموقع الرسمي te.eg.',
+  pts:['زاحف يحترم robots.txt مع تقسيم النصوص وتخزينها في PostgreSQL','استرجاع هجين: بحث كثيف عبر pgvector + بحث نصي كامل، ودمج النتائج بـ RRF','نماذج Groq مع حد أدنى للصلة وحواجز حماية ضد حقن الأوامر','حفظ نقاط جلسات المحادثة (Checkpointing) مع الاسترجاع والحذف']},
+ {t:'Data Squad: تحليل البيانات بوكلاء متعددين',
+  d:'اسأل بالعربية أو الإنجليزية وسيقوم فريق من الوكلاء بالاستعلام عن قاعدة بيانات SQL Server وتنظيفها وإعداد التقارير عنها.',
+  pts:['وكلاء Supervisor وSQL وCleaner وReporter على LangGraph','موافقة بشرية (Human-in-the-loop) قبل تشغيل كود التنظيف المُولَّد داخل بيئة معزولة','خوادم MCP لـ SQL والبيئة المعزولة وبحث الويب عبر Tavily','عرض مباشر لمسار العمل مع تصدير PDF']},
+ {t:'Planing Trip AI: مخطط رحلات بوكلاء متعددين',
+  d:'يخطط للرحلات الجوية والفنادق والطقس والميزانية، ثم يتيح لك الموافقة على خطة الرحلة أو تعديلها.',
+  pts:['وكلاء Supervisor وFlight وHotel وWeather وBudget وItinerary وFinal','الأدوات عبر MCP: ‏AviationStack وTavily وخادم OpenWeather مخصص','خطوة موافقة بشرية على مسودة خطة الرحلة','حفظ حالة الجلسة باستخدام PostgresSaver']},
+ {t:'H Store: أتمتة متجر إلكتروني بـ n8n',
+  d:'استبدل سير عمل يدوي بالكامل لتصوير المنتجات ونشرها لمتجر ملابس على فيسبوك.',
+  pts:['مشغّل Google Drive يولّد صور موديل بالذكاء الاصطناعي بـ 6 وضعيات','علامة مائية وعناوين بالذكاء الاصطناعي والنشر عبر Facebook Graph API','موافقة عبر Telegram قبل نشر أي منشور','وكيل خدمة عملاء على Messenger مع نماذج بديلة وتفريغ صوتي وحجز الطلبات في Google Sheets']},
+ {t:'التعرف التلقائي على لوحات السيارات',
+  d:'يكتشف لوحات ترخيص المركبات في الصور والفيديو.',
+  pts:['خط معالجة للكشف بالرؤية الحاسوبية','دُرّب وقُيّم أثناء التدريب العملي في أكاديمية Instant']},
+ {t:'كشف وتجزئة أورام المخ',
+  d:'نموذج U-Net مدرّب من الصفر يحدد حدود الأورام في صور الرنين المغناطيسي.',
+  pts:['شبكة CNN مع Batch Normalization وDropout','معالجة صور الرنين: تغيير الحجم والتطبيع وقنوات FLAIR متعددة','مُحسّن Adam مع دالة خسارة Dice مخصصة وتقييم بـ Mean IoU','واجهة تقارن الصورة الأصلية بالقناع المتوقع']},
+ {t:'لوحة المعاملات المالية',
+  d:'لوحة Power BI لاستكشاف المعاملات والمستخدمين والبطاقات.',
+  pts:['تنظيف وتحويل البيانات بـ Power Query','نموذج بيانات يربط المعاملات بالمستخدمين والبطاقات','أبعاد DAX مخصصة وخرائط مخصصة وروابط صور']},
+ {t:'تحليل مبيعات BMW',
+  d:'تحليل استكشافي لمجموعة بيانات حقيقية للمركبات تحتوي على قيم مفقودة.',
+  pts:['هندسة الخصائص لاستنتاج السمات المفقودة وملئها','اتجاهات عالمية في توزيع الشركات المصنّعة وشعبية أنواع الهياكل']}
+];
+const CATS_AR = {all:'الكل', agents:'الوكلاء وRAG', vision:'الرؤية الحاسوبية', data:'تحليل البيانات'};
+const JOBS_AR = [
+ ['متدرب ذكاء اصطناعي توليدي','Think Company','يوليو 2025 – نوفمبر 2025 · القاهرة',['عملت على نماذج الانتشار وأدوات الذكاء الاصطناعي ضمن مبادرات الذكاء التوليدي بالشركة.','جرّبت التوليد بالأوامر والضبط الدقيق (LoRA وPEFT).','قيّمت مخرجات النماذج مع فريق الذكاء الاصطناعي لتحسين جودة التوليد.']],
+ ['تدريب عملي في الذكاء الاصطناعي وتحليل البيانات','أكاديمية Instant','15 سبتمبر – 15 أكتوبر 2025 · القاهرة',['نفّذت مشاريع في التحليل المالي وتجزئة أورام المخ والتعرف على لوحات السيارات وتحليل المشاعر وتلخيص النصوص.','طبّقت مسارات عمل كاملة من تنظيف البيانات إلى تدريب النماذج وتقييمها.']],
+ ['متدرب تعلّم الآلة','جامعة زويل','أغسطس 2023 – نوفمبر 2023 · القاهرة',['درّبت نماذج تعلّم الآلة وقيّمتها على بيانات واقعية.','تدرّبت على المعالجة المسبقة واختيار الخصائص وتحسين النماذج.']],
+ ['متدرب تحليل بيانات','شركة جنوب الدلتا لتوزيع الكهرباء','أغسطس 2023 – سبتمبر 2023 · طنطا',['نظّفت البيانات وحلّلتها باستخدام Pandas وNumPy.','بنيت لوحات Power BI وحسّنت استعلامات SQL لأصحاب المصلحة.']],
+ ['مشروع التخرج، قائد الفريق (تقدير A+)','الذكاء الاصطناعي في منصة تعليم إلكتروني','جامعة طنطا',['قدت 4 أعضاء ودمجت الذكاء الاصطناعي في منصة تعليم إلكتروني للويب والجوال.','بنيت التحقق من الهوية باستخدام OpenCV وOCR، وكاشفاً للألفاظ المسيئة بدقة تتجاوز 95% (TF-IDF وتضمينات الكلمات).']]
+];
+const SK_AR = {'Generative & Agentic AI':'الذكاء التوليدي والوكلاء','RAG & Search':'RAG والبحث','Machine & Deep Learning':'تعلّم الآلة والتعلّم العميق','Data & BI':'البيانات وذكاء الأعمال','Automation & Backend':'الأتمتة والخلفية'};
+
+const EN = {
+  title: document.title, meta: document.querySelector('meta[name=description]').content,
+  a_lang:'Switch to Arabic', liveTag:'● Live demo', openAria:'Open ',
+  webapp:'This project runs as a live web app. Use the demo button below.',
+  soon:'Demo video coming soon', nf:'Demo video not found. Check the videos folder and file name.',
+  demoBtn:'Open live demo', gh:'View on GitHub'
+};
+document.querySelectorAll('[data-i18n]').forEach(el=>{EN[el.dataset.i18n]=el.innerHTML});
+document.querySelectorAll('[data-tw]').forEach(el=>{EN[el.dataset.tw]=el.textContent});
+document.querySelectorAll('[data-aria]').forEach(el=>{EN[el.dataset.aria]=el.getAttribute('aria-label')});
+
+const AR = {
+  title:'محمد الأعصر | مهندس ذكاء اصطناعي ومحلل بيانات',
+  meta:'معرض أعمال محمد الأعصر: الذكاء الاصطناعي التوليدي وأنظمة Agentic/RAG والرؤية الحاسوبية وتحليل البيانات.',
+  name:'محمد الأعصر', ini:'م أ',
+  a_lang:'التبديل إلى الإنجليزية', a_theme:'تبديل الوضع الداكن', a_close:'إغلاق',
+  n_about:'نبذة عني', n_exp:'الخبرات', n_proj:'المشاريع', n_skills:'المهارات', n_cert:'الشهادات', n_contact:'تواصل',
+  hero1:'أهلاً، أنا محمد الأعصر',
+  hero2:'أبني أنظمة ذكاء اصطناعي تفكّر وتسترجع وتتصرّف.',
+  hero_p:'أنا مهندس ذكاء اصطناعي مبتدئ ومحلل بيانات من القاهرة. أعمل على الذكاء الاصطناعي التوليدي وأنظمة الوكلاء (Agents) وRAG والرؤية الحاسوبية، وأحوّل البيانات الخام إلى قرارات.',
+  b_work:'شاهد أعمالي', b_cv:'تحميل السيرة الذاتية', b_touch:'تواصل معي',
+  c_gen:'الذكاء التوليدي', c_agents:'الوكلاء',
+  s1:'مشاريع متكاملة', s2:'مشروع التخرج', s3b:'200 ساعة', s3:'مسار الذكاء التوليدي (DEPI)', s4b:'خبير', s4:'تصنيف Kaggle',
+  h_about:'نبذة عني',
+  about1:'خريج علوم الحاسب من جامعة طنطا، لديّ خبرة عملية في تعلّم الآلة والتعلّم العميق والذكاء الاصطناعي التوليدي وأنظمة الوكلاء وRAG، مدعومة بأساس قوي في تحليل البيانات باستخدام Python وSQL وأدوات ذكاء الأعمال. نفّذت مشاريع في الرؤية الحاسوبية ومعالجة اللغة الطبيعية والأنظمة متعددة الوكلاء وأتمتة سير العمل وخطوط RAG بمستوى إنتاجي، وقدت فريقاً من 4 أفراد للحصول على تقدير A+ في مشروع التخرج.',
+  about2:'أحب بناء أشياء تعمل من البداية إلى النهاية: من جمع البيانات والنمذجة إلى واجهات البرمجة وDocker وواجهة مستخدم سهلة الاستخدام.',
+  f1:'<span>الموقع</span>القاهرة، مصر',
+  f2:'<span>الدرجة العلمية</span>بكالوريوس علوم الحاسب، جامعة طنطا',
+  f3:'<span>المعدل التراكمي</span>3.1 من 4',
+  f4:'<span>اللغات</span>العربية (لغة أم)، الإنجليزية (احترافي)',
+  f5:'<span>إنجاز</span>المركز الثالث في مسابقة التحليل بأكاديمية Instant',
+  h_exp:'الخبرات', l_exp:'تدريبات عملية وتدريب ميداني في الذكاء الاصطناعي التوليدي وتعلّم الآلة وتحليل البيانات.',
+  h_proj:'المشاريع', l_proj:'اختر مشروعاً لمشاهدة العرض التوضيحي وقراءة التفاصيل.',
+  h_skills:'المهارات', l_skills:'الأدوات والمفاهيم التي أستخدمها يومياً.',
+  h_cert:'الشهادات والدورات', l_cert:'اختر شهادة لعرضها بالحجم الكامل.',
+  h_courses:'الدورات',
+  courses_p:'<b style="color:var(--ink)">مبادرة رواد مصر الرقمية (DEPI)، مسار الذكاء الاصطناعي التوليدي</b> (نوفمبر 2025 – يوليو 2026): 200 ساعة تغطي تعلّم الآلة والتعلّم العميق والذكاء التوليدي (VAEs وGANs ونماذج الانتشار) وRAG وهندسة الأوامر والذكاء الاصطناعي متعدد الوكلاء.<br><br><b style="color:var(--ink)">أكاديمية Instant، دورة الذكاء الاصطناعي وتحليل البيانات</b> (أكتوبر 2024 – يوليو 2025): Python وSQL وPower BI وScikit-learn وTensorFlow/Keras وOpenCV وYOLO ومعالجة اللغة الطبيعية وStreamlit.',
+  h_contact:'لنعمل معاً', l_contact:'أنا متاح لوظائف هندسة الذكاء الاصطناعي والبيانات. أرسل لي رسالة وسأرد عليك.',
+  liveTag:'● عرض مباشر', openAria:'فتح ',
+  webapp:'يعمل هذا المشروع كتطبيق ويب مباشر. استخدم زر العرض التجريبي بالأسفل.',
+  soon:'فيديو العرض التوضيحي قريباً', nf:'لم يُعثر على فيديو العرض. تحقق من مجلد الفيديوهات واسم الملف.',
+  demoBtn:'فتح العرض المباشر', gh:'عرض على GitHub'
+};
+
+let lang = 'en';
+try { lang = localStorage.getItem('lang')==='ar' ? 'ar' : 'en'; } catch(e){}
+const tr = k => (lang==='ar' && AR[k]) || EN[k];
+const pj = i => lang==='ar' ? {...PROJECTS[i], ...PROJECTS_AR[i]} : PROJECTS[i];
+
+/* typewriter intro (loops forever, restarts when the language changes) */
+const TW = {id:0, init:false};
+function typewriter(){
+  const id=++TW.id, h=$('.hero h1'), a=$('.l1'), b=$('.l2'), t1=tr('hero1'), t2=tr('hero2');
+  const c=document.createElement('i'); c.className='caret';
+  h.style.minHeight=''; a.textContent=t1; b.textContent=t2; h.style.minHeight=h.offsetHeight+'px';
+  const na=document.createTextNode(''), nb=document.createTextNode('');
   a.textContent=''; b.textContent=''; a.append(na); b.append(nb);
-  const fade=[$('.hero p'),$('.hero .cta')]; fade.forEach(e=>{e.style.opacity=0;e.style.transition='opacity .8s'});
-  const wait=ms=>new Promise(r=>setTimeout(r,ms));
-  async function type(n,el,txt,ms){el.append(c);for(let k=1;k<=txt.length;k++){n.data=txt.slice(0,k);await wait(ms)}}
-  async function erase(n,el,ms){el.append(c);for(let k=n.data.length-1;k>=0;k--){n.data=n.data.slice(0,k);await wait(ms)}}
-  (async()=>{for(;;){
-    await type(na,a,t1,55); await wait(400); await type(nb,b,t2,36);
-    fade.forEach(e=>e.style.opacity=1);
+  const fade=[$('.hero p'),$('.hero .cta')];
+  if(!TW.init){TW.init=true; fade.forEach(e=>{e.style.opacity=0;e.style.transition='opacity .8s'});}
+  const wait=ms=>new Promise(r=>setTimeout(r,ms)), ok=()=>id===TW.id;
+  async function type(n,el,txt,ms){if(!ok())return;el.append(c);for(let k=1;k<=txt.length&&ok();k++){n.data=txt.slice(0,k);await wait(ms)}}
+  async function erase(n,el,ms){if(!ok())return;el.append(c);for(let k=n.data.length-1;k>=0&&ok();k--){n.data=n.data.slice(0,k);await wait(ms)}}
+  (async()=>{while(ok()){
+    await type(na,a,t1,55); if(!ok())break; await wait(400); await type(nb,b,t2,36);
+    if(!ok())break; fade.forEach(e=>e.style.opacity=1);
     await wait(3000);
     await erase(nb,b,18); await wait(200); await erase(na,a,22); await wait(500);
   }})();
-})();
+}
 
 /* experience */
-$('#jobs').innerHTML = JOBS.map(j=>`<div class="job"><h3>${j[0]}</h3><em>${j[1]} · ${j[2]}</em><ul>${j[3].map(x=>`<li>${x}</li>`).join('')}</ul></div>`).join('');
+function drawJobs(){
+  const J = lang==='ar' ? JOBS_AR : JOBS;
+  $('#jobs').innerHTML = J.map(j=>`<div class="job"><h3>${j[0]}</h3><em>${j[1]} · ${j[2]}</em><ul>${j[3].map(x=>`<li>${x}</li>`).join('')}</ul></div>`).join('');
+}
 
 /* skills */
-$('#skillgrid').innerHTML = Object.entries(SKILLS).map(([k,v])=>`<div class="card"><h3>${k}</h3><div class="chips">${v.map(x=>`<span>${x}</span>`).join('')}</div></div>`).join('');
+function drawSkills(){
+  $('#skillgrid').innerHTML = Object.entries(SKILLS).map(([k,v])=>`<div class="card"><h3>${lang==='ar'?SK_AR[k]:k}</h3><div class="chips">${v.map(x=>`<span>${x}</span>`).join('')}</div></div>`).join('');
+}
 
 /* projects */
 let filter = 'all';
-function drawTabs(){ $('#tabs').innerHTML = Object.entries(CATS).map(([k,v])=>`<button class="tab" data-k="${k}" aria-pressed="${k===filter}">${v}</button>`).join(''); }
+function drawTabs(){ const C = lang==='ar' ? CATS_AR : CATS; $('#tabs').innerHTML = Object.entries(C).map(([k,v])=>`<button class="tab" data-k="${k}" aria-pressed="${k===filter}">${v}</button>`).join(''); }
 function drawGrid(){
-  $('#grid').innerHTML = PROJECTS.map((p,i)=>({p,i})).filter(o=>filter==='all'||o.p.c===filter).map(({p,i},n)=>`
-  <button class="proj" style="animation-delay:${n*60}ms" data-i="${i}" aria-label="Open ${p.t}">
-    <div class="thumb">${initials(p.t)}${p.file?`${pic(IMG+enc(p.file),p.ext||'png',p.t,'loading="lazy"')}${p.novideo?'':'<span class="play">▶</span>'}`:''}${p.demo?'<span class="live">● Live demo</span>':''}</div>
-    <div class="pbody"><h3>${p.t}</h3><p>${p.d}</p><div class="tags">${p.tags.map(t=>`<span>${t}</span>`).join('')}</div></div>
-  </button>`).join('');
+  $('#grid').innerHTML = PROJECTS.map((_,i)=>i).filter(i=>filter==='all'||PROJECTS[i].c===filter).map((i,n)=>{ const q=PROJECTS[i], p=pj(i); return `
+  <button class="proj" style="animation-delay:${n*60}ms" data-i="${i}" aria-label="${tr('openAria')}${p.t}">
+    <div class="thumb">${initials(q.t)}${q.file?`${pic(IMG+enc(q.file),q.ext||'png',p.t,'loading="lazy"')}${q.novideo?'':'<span class="play">▶</span>'}`:''}${q.demo?`<span class="live">${tr('liveTag')}</span>`:''}</div>
+    <div class="pbody"><h3>${p.t}</h3><p>${p.d}</p><div class="tags">${q.tags.map(t=>`<span>${t}</span>`).join('')}</div></div>
+  </button>`}).join('');
 }
 $('#tabs').onclick = e => { const b=e.target.closest('.tab'); if(!b) return; filter=b.dataset.k; drawTabs(); drawGrid(); };
-drawTabs(); drawGrid();
 
 const dlg = $('#dlg'), media = $('#media');
 $('#grid').onclick = e => {
-  const b = e.target.closest('.proj'); if(!b) return; const p = PROJECTS[b.dataset.i];
-  media.innerHTML = p.novideo ? `${pic(IMG+enc(p.file),p.ext||'png',p.t)}` : p.file ? `<video controls playsinline preload="metadata" src="${VID+enc(p.file)}.mp4"></video>` : (p.demo?'<span>This project runs as a live web app. Use the demo button below.</span>':'<span>Demo video coming soon</span>');
-  const v = media.querySelector('video'); if(v) v.onerror = () => { if(!v.dataset.t){ v.dataset.t=1; v.src=VID+enc(p.file); v.load(); } else media.innerHTML = '<span>Demo video not found. Check the videos folder and file name.</span>'; };
-  $('#mbody').innerHTML = `<h3>${p.t}</h3><p>${p.d}</p>${p.pts.length?`<ul>${p.pts.map(x=>`<li>${x}</li>`).join('')}</ul>`:''}<div class="tags" style="margin:0 0 20px">${p.tags.map(t=>`<span>${t}</span>`).join('')}</div>${p.demo?`<a class="btn primary" href="${p.demo}" target="_blank" rel="noopener">Open live demo</a> `:''}${p.repo?`<a class="btn${p.demo?'':' primary'}" href="${GH+p.repo}" target="_blank" rel="noopener">View on GitHub</a>`:''}`;
+  const b = e.target.closest('.proj'); if(!b) return; const p = pj(+b.dataset.i);
+  media.innerHTML = p.novideo ? `${pic(IMG+enc(p.file),p.ext||'png',p.t)}` : p.file ? `<video controls playsinline preload="metadata" src="${VID+enc(p.file)}.mp4"></video>` : (p.demo?`<span>${tr('webapp')}</span>`:`<span>${tr('soon')}</span>`);
+  const v = media.querySelector('video'); if(v) v.onerror = () => { if(!v.dataset.t){ v.dataset.t=1; v.src=VID+enc(p.file); v.load(); } else media.innerHTML = `<span>${tr('nf')}</span>`; };
+  $('#mbody').innerHTML = `<h3>${p.t}</h3><p>${p.d}</p>${p.pts.length?`<ul>${p.pts.map(x=>`<li>${x}</li>`).join('')}</ul>`:''}<div class="tags" style="margin:0 0 20px">${p.tags.map(t=>`<span>${t}</span>`).join('')}</div>${p.demo?`<a class="btn primary" href="${p.demo}" target="_blank" rel="noopener">${tr('demoBtn')}</a> `:''}${p.repo?`<a class="btn${p.demo?'':' primary'}" href="${GH+p.repo}" target="_blank" rel="noopener">${tr('gh')}</a>`:''}`;
   dlg.showModal();
 };
 dlg.addEventListener('close', () => { media.innerHTML = ''; });
+
+/* apply language to the whole page */
+function applyLang(){
+  const ar = lang==='ar';
+  root.lang = lang; root.dir = ar ? 'rtl' : 'ltr';
+  document.title = tr('title'); document.querySelector('meta[name=description]').content = tr('meta');
+  document.querySelectorAll('[data-i18n]').forEach(el=>{el.innerHTML = tr(el.dataset.i18n)});
+  document.querySelectorAll('[data-aria]').forEach(el=>el.setAttribute('aria-label', tr(el.dataset.aria)));
+  const lb = $('#lang'); lb.textContent = ar ? 'EN' : 'ع'; lb.setAttribute('aria-label', tr('a_lang'));
+  const pi = document.querySelector('.pimg img'); if(pi) pi.alt = tr('name');
+  drawJobs(); drawSkills(); drawTabs(); drawGrid(); typewriter();
+}
+$('#lang').onclick = () => { lang = lang==='ar' ? 'en' : 'ar'; try{localStorage.setItem('lang',lang)}catch(e){} applyLang(); };
+applyLang();
 
 /* certificates */
 $('#certs').innerHTML = CERTS.map((c,i)=>`<button class="cert" data-i="${i}">${pic(CERT+enc(c[1].replace(/\.[^.]+$/,'')),c[1].split('.').pop(),c[0],'loading="lazy"')}<div>${c[0]}</div></button>`).join('');
