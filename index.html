@@ -236,9 +236,17 @@ const PROJECTS = [
  {t:'BMW Vehicle Sales Analysis', c:'data', file:'BMW Project', repo:'BMW_Sales_Analysis',
   d:'Exploratory analysis of a real vehicle dataset with missing values.',
   pts:['Feature engineering to infer and fill missing attributes','Global trends in manufacturer distribution and body-type popularity'],
-  tags:['Python','Pandas','EDA','Visualization']}
+  tags:['Python','Pandas','EDA','Visualization']},
+ {t:'Lamma wa Maana: AI Ramadan Short Film', c:'media', file:'Lamma_wa_maana', ext:'jpg',
+  d:'A short film made with generative AI: a warm Ramadan moment in the grandfather\'s home before the Fajr call to prayer.',
+  pts:['Adam and Layla struggle to wake up for suhoor and complain about fasting','The grandfather calmly explains that the intention (niyyah) is a covenant with God, not just words','When the Fajr adhan starts, the children fear they cannot fast; he reassures them and invites them to pray','Made during my training at a company producing AI-generated ads and videos'],
+  tags:['Generative AI','AI Video','Storytelling']},
+ {t:'Vitrac: Interactive AI Ad', c:'media', file:'vetrac', ext:'jpg',
+  d:'An interactive ad made with AI that shows, in a simple and funny way, how to prepare the Vitrac product.',
+  pts:['Steps presented in a simplified, visual way','A playful, comedic touch keeps viewers engaged','Highlights the benefits of the product clearly and enjoyably','Made during my training at a company producing AI-generated ads and videos'],
+  tags:['Generative AI','AI Video','Advertising']}
 ];
-const CATS = {all:'All', agents:'Agents & RAG', vision:'Computer Vision', data:'Data Analysis'};
+const CATS = {all:'All', agents:'Agents & RAG', vision:'Computer Vision', data:'Data Analysis', media:'AI Media'};
 
 const JOBS = [
  ['Generative AI Intern','Think Company','Jul 2025 – Nov 2025 · Cairo',['Worked on diffusion models and AI tools for the company\'s generative AI initiatives.','Experimented with prompt-based generation and fine-tuning (LoRA, PEFT).','Evaluated model outputs with the AI team to improve generation quality.']],
@@ -303,9 +311,15 @@ const PROJECTS_AR = [
   pts:['تنظيف وتحويل البيانات بـ Power Query','نموذج بيانات يربط المعاملات بالمستخدمين والبطاقات','أبعاد DAX مخصصة وخرائط مخصصة وروابط صور']},
  {t:'تحليل مبيعات BMW',
   d:'تحليل استكشافي لمجموعة بيانات حقيقية للمركبات تحتوي على قيم مفقودة.',
-  pts:['هندسة الخصائص لاستنتاج السمات المفقودة وملئها','اتجاهات عالمية في توزيع الشركات المصنّعة وشعبية أنواع الهياكل']}
+  pts:['هندسة الخصائص لاستنتاج السمات المفقودة وملئها','اتجاهات عالمية في توزيع الشركات المصنّعة وشعبية أنواع الهياكل']},
+ {t:'لمّة ومعنى: فيلم رمضاني قصير بالذكاء الاصطناعي',
+  d:'فيلم قصير بالذكاء الاصطناعي التوليدي يقدّم لحظة رمضانية دافئة داخل منزل الجد قبل أذان الفجر.',
+  pts:['يكافح آدم وليلى للاستيقاظ على السحور ويتذمّران من الصيام','يوضح لهما الجد بهدوء أن النية عهد مع الله وليست مجرد كلمات','مع بدء أذان الفجر تظهر مخاوف الأطفال من عدم قدرتهم على الصيام، فيطمئنهم الجد ويدعوهم للصلاة','نُفّذ أثناء تدريبي في شركة تنتج إعلانات وفيديوهات بالذكاء الاصطناعي']},
+ {t:'Vitrac: إعلان تفاعلي بالذكاء الاصطناعي',
+  d:'إعلان تفاعلي مبتكر بالذكاء الاصطناعي يوضح بطريقة جذابة وسهلة وكوميدية طريقة تحضير منتج «فيتراك».',
+  pts:['خطوات مقدَّمة بشكل مبسّط ومرئي','لمسة مرحة تحافظ على اهتمام المشاهدين','يبرز فائدة المنتج بطريقة واضحة وممتعة','نُفّذ أثناء تدريبي في شركة تنتج إعلانات وفيديوهات بالذكاء الاصطناعي']}
 ];
-const CATS_AR = {all:'الكل', agents:'الوكلاء وRAG', vision:'الرؤية الحاسوبية', data:'تحليل البيانات'};
+const CATS_AR = {all:'الكل', agents:'الوكلاء وRAG', vision:'الرؤية الحاسوبية', data:'تحليل البيانات', media:'محتوى بالذكاء الاصطناعي'};
 const JOBS_AR = [
  ['متدرب ذكاء اصطناعي توليدي','Think Company','يوليو 2025 – نوفمبر 2025 · القاهرة',['عملت على نماذج الانتشار وأدوات الذكاء الاصطناعي ضمن مبادرات الذكاء التوليدي بالشركة.','جرّبت التوليد بالأوامر والضبط الدقيق (LoRA وPEFT).','قيّمت مخرجات النماذج مع فريق الذكاء الاصطناعي لتحسين جودة التوليد.']],
  ['تدريب عملي في الذكاء الاصطناعي وتحليل البيانات','أكاديمية Instant','15 سبتمبر – 15 أكتوبر 2025 · القاهرة',['نفّذت مشاريع في التحليل المالي وتجزئة أورام المخ والتعرف على لوحات السيارات وتحليل المشاعر وتلخيص النصوص.','طبّقت مسارات عمل كاملة من تنظيف البيانات إلى تدريب النماذج وتقييمها.']],
@@ -402,7 +416,7 @@ function drawTabs(){ const C = lang==='ar' ? CATS_AR : CATS; $('#tabs').innerHTM
 function drawGrid(){
   $('#grid').innerHTML = PROJECTS.map((_,i)=>i).filter(i=>filter==='all'||PROJECTS[i].c===filter).map((i,n)=>{ const q=PROJECTS[i], p=pj(i); return `
   <button class="proj" style="animation-delay:${n*60}ms" data-i="${i}" aria-label="${tr('openAria')}${p.t}">
-    <div class="thumb">${initials(q.t)}${q.file?`${pic(IMG+enc(q.file),q.ext||'png',p.t,'loading="lazy"')}${q.novideo?'':'<span class="play">▶</span>'}`:''}${q.demo?`<span class="live">${tr('liveTag')}</span>`:''}</div>
+    <div class="thumb">${initials(q.t)}${q.file?`${pic(IMG+enc(q.img||q.file),q.ext||'png',p.t,'loading="lazy"')}${q.novideo?'':'<span class="play">▶</span>'}`:''}${q.demo?`<span class="live">${tr('liveTag')}</span>`:''}</div>
     <div class="pbody"><h3>${p.t}</h3><p>${p.d}</p><div class="tags">${q.tags.map(t=>`<span>${t}</span>`).join('')}</div></div>
   </button>`}).join('');
 }
@@ -411,7 +425,7 @@ $('#tabs').onclick = e => { const b=e.target.closest('.tab'); if(!b) return; fil
 const dlg = $('#dlg'), media = $('#media');
 $('#grid').onclick = e => {
   const b = e.target.closest('.proj'); if(!b) return; const p = pj(+b.dataset.i);
-  media.innerHTML = p.novideo ? `${pic(IMG+enc(p.file),p.ext||'png',p.t)}` : p.file ? `<video controls autoplay playsinline preload="metadata" src="${VID+enc(p.file)}.mp4"></video>` : (p.demo?`<span>${tr('webapp')}</span>`:`<span>${tr('soon')}</span>`);
+  media.innerHTML = p.novideo ? `${pic(IMG+enc(p.img||p.file),p.ext||'png',p.t)}` : p.file ? `<video controls autoplay playsinline preload="metadata" src="${VID+enc(p.file)}.mp4"></video>` : (p.demo?`<span>${tr('webapp')}</span>`:`<span>${tr('soon')}</span>`);
   const v = media.querySelector('video'); if(v) v.onerror = () => { if(!v.dataset.t){ v.dataset.t=1; v.src=VID+enc(p.file); v.load(); } else media.innerHTML = `<span>${tr('nf')}</span>`; };
   $('#mbody').innerHTML = `<h3>${p.t}</h3><p>${p.d}</p>${p.pts.length?`<ul>${p.pts.map(x=>`<li>${x}</li>`).join('')}</ul>`:''}<div class="tags" style="margin:0 0 20px">${p.tags.map(t=>`<span>${t}</span>`).join('')}</div>${p.demo?`<a class="btn primary" href="${p.demo}" target="_blank" rel="noopener">${tr('demoBtn')}</a> `:''}${p.repo?`<a class="btn${p.demo?'':' primary'}" href="${GH+p.repo}" target="_blank" rel="noopener">${tr('gh')}</a>`:''}`;
   dlg.showModal();
