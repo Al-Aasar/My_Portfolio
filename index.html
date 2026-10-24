@@ -226,6 +226,14 @@ const IMG = 'Images/', VID = 'videos/', CERT = 'Certificates/';
 const GH = 'https://github.com/Al-Aasar/';
 
 const PROJECTS = [
+ {t:'Data Assistant: Conversational Multi-Agent BI', c:'agents', file:'Data-Assistant', novideo:true, repo:'Data-Assistant',
+  d:'Upload a CSV or Excel file and ask business questions in Arabic or English; agents write safe SQL and answer in plain business language.',
+  pts:['LangGraph pipeline: Guardrails, Knowledge, Analysis and Result agents','Guardrails block write operations, off-topic chat and prompt injection','Text-to-SQL on an isolated in-memory DuckDB sandbox with a self-correction retry loop','FastAPI backend, Docker deployment and an evaluation suite for guardrails, SQL and end-to-end runs'],
+  tags:['LangGraph','DuckDB','Gemini','FastAPI']},
+ {t:'Panini: n8n Restaurant Ordering Assistant', c:'agents', file:'P_n8n', repo:'Panini_n8n_workflow',
+  d:'A WhatsApp agent that takes restaurant orders in Egyptian Arabic, verifies payment and sends the order to the kitchen.',
+  pts:['Handles text, voice notes (STT + TTS) and receipt images with Gemini and Groq','Live menu lookups from Google Sheets to avoid made-up items and prices','Payment receipt OCR, then Telegram approval with Confirm / Reject buttons','Automatic thermal POS printing over TCP, order ledger in Sheets and 5-minute staff reminders'],
+  tags:['n8n','Gemini','Groq','WhatsApp']},
  {t:'Graph RAG: Egyptian Premier League', c:'agents', file:'Graph_RAG_Egyptian-League', repo:'Graph_RAG_Egyptian-League',
   d:'A knowledge assistant that answers questions about clubs, players, transfers and trophies in Arabic or English.',
   pts:['Knowledge graph from Wikidata and Wikipedia, stored in Neo4j','LangChain GraphCypherQAChain turns questions into Cypher queries','Entity resolution with BAAI/bge-m3 for spelling variations','FastAPI backend, Arabic chat UI, Docker one-command setup'],
@@ -310,6 +318,12 @@ $('#theme').onclick = () => { root.dataset.theme = root.dataset.theme==='dark'?'
 
 /* ===== language (EN / AR) ===== */
 const PROJECTS_AR = [
+ {t:'Data Assistant: نظام BI تحادثي بوكلاء متعددين',
+  d:'ارفع ملف CSV أو Excel واسأل أسئلة عمل بالعربية أو الإنجليزية؛ يكتب الوكلاء استعلامات SQL آمنة ويجيبون بلغة أعمال واضحة.',
+  pts:['مسار LangGraph يضم وكلاء Guardrails وKnowledge وAnalysis وResult','حواجز حماية تمنع عمليات الكتابة والمحادثات خارج النطاق وحقن الأوامر','تحويل النص إلى SQL داخل بيئة DuckDB معزولة في الذاكرة مع حلقة تصحيح ذاتي','واجهة FastAPI ونشر عبر Docker ومجموعة تقييم للحواجز وSQL والتشغيل الكامل']},
+ {t:'Panini: مساعد طلبات مطعم بـ n8n',
+  d:'وكيل على واتساب يستقبل طلبات المطعم بالعامية المصرية، ويتحقق من الدفع، ويرسل الطلب إلى المطبخ.',
+  pts:['يتعامل مع النصوص والرسائل الصوتية (STT وTTS) وصور الإيصالات عبر Gemini وGroq','بحث مباشر في قائمة الطعام على Google Sheets لتجنّب اختراع أصناف أو أسعار','قراءة إيصال الدفع بـ OCR ثم موافقة عبر Telegram بأزرار تأكيد / رفض','طباعة تلقائية على طابعة POS حرارية عبر TCP، وسجل الطلبات في Sheets، وتذكير الموظفين بعد 5 دقائق']},
  {t:'Graph RAG: الدوري المصري الممتاز',
   d:'مساعد معرفي يجيب عن أسئلة حول الأندية واللاعبين والانتقالات والبطولات بالعربية أو الإنجليزية.',
   pts:['رسم معرفي (Knowledge Graph) من Wikidata وWikipedia مخزّن في Neo4j','LangChain GraphCypherQAChain يحوّل الأسئلة إلى استعلامات Cypher','ربط الكيانات (Entity Resolution) عبر BAAI/bge-m3 للتعامل مع اختلافات الإملاء','واجهة خلفية FastAPI وواجهة محادثة عربية وإعداد Docker بأمر واحد']},
