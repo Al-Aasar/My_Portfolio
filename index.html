@@ -230,7 +230,7 @@ const PROJECTS = [
   d:'Upload a CSV or Excel file and ask business questions in Arabic or English; agents write safe SQL and answer in plain business language.',
   pts:['LangGraph pipeline: Guardrails, Knowledge, Analysis and Result agents','Guardrails block write operations, off-topic chat and prompt injection','Text-to-SQL on an isolated in-memory DuckDB sandbox with a self-correction retry loop','FastAPI backend, Docker deployment and an evaluation suite for guardrails, SQL and end-to-end runs'],
   tags:['LangGraph','DuckDB','Gemini','FastAPI']},
- {t:'Panini: n8n Restaurant Ordering Assistant', c:'agents', file:'P_n8n', repo:'Panini_n8n_workflow',
+ {t:'Panini: n8n Restaurant Ordering Assistant', c:'n8n', file:'P_n8n', repo:'Panini_n8n_workflow',
   d:'A WhatsApp agent that takes restaurant orders in Egyptian Arabic, verifies payment and sends the order to the kitchen.',
   pts:['Handles text, voice notes (STT + TTS) and receipt images with Gemini and Groq','Live menu lookups from Google Sheets to avoid made-up items and prices','Payment receipt OCR, then Telegram approval with Confirm / Reject buttons','Automatic thermal POS printing over TCP, order ledger in Sheets and 5-minute staff reminders'],
   tags:['n8n','Gemini','Groq','WhatsApp']},
@@ -250,7 +250,7 @@ const PROJECTS = [
   d:'Plans flights, hotels, weather and budget, then lets you approve or revise the itinerary.',
   pts:['Supervisor, Flight, Hotel, Weather, Budget, Itinerary and Final agents','Tools via MCP: AviationStack, Tavily and a custom OpenWeather server','Human approval step for the draft itinerary','Session state saved with PostgresSaver'],
   tags:['LangGraph','MCP','PostgreSQL','Jinja2']},
- {t:'H Store: n8n E-commerce Automation', c:'agents', file:'N8N_H Store', repo:'E-commerce-N8N-Project-H-Store',
+ {t:'H Store: n8n E-commerce Automation', c:'n8n', file:'N8N_H Store', repo:'E-commerce-N8N-Project-H-Store',
   d:'Replaced a fully manual product-photo and posting workflow for a Facebook clothing store.',
   pts:['Google Drive trigger generates AI model photos in 6 poses','Watermarking, AI captions and publishing through the Facebook Graph API','Telegram approval before any post goes live','Messenger customer-service agent with model fallback, voice transcription and order booking in Google Sheets'],
   tags:['n8n','OpenAI','Gemini','Graph API']},
@@ -279,7 +279,7 @@ const PROJECTS = [
   pts:['Steps presented in a simplified, visual way','A playful, comedic touch keeps viewers engaged','Highlights the benefits of the product clearly and enjoyably','Made during my training at a company producing AI-generated ads and videos'],
   tags:['Generative AI','AI Video','Advertising']}
 ];
-const CATS = {all:'All', agents:'Agents & RAG', vision:'Computer Vision', data:'Data Analysis', media:'AI Media'};
+const CATS = {all:'All', agents:'Agents & RAG', n8n:'n8n Automation', vision:'Computer Vision', data:'Data Analysis', media:'AI Media'};
 
 const JOBS = [
  ['Generative AI Intern','Think Company','Jul 2025 – Nov 2025 · Cairo',['Worked on diffusion models and AI tools for the company\'s generative AI initiatives.','Experimented with prompt-based generation and fine-tuning (LoRA, PEFT).','Evaluated model outputs with the AI team to improve generation quality.']],
@@ -358,7 +358,7 @@ const PROJECTS_AR = [
   d:'إعلان تفاعلي مبتكر بالذكاء الاصطناعي يوضح بطريقة جذابة وسهلة وكوميدية طريقة تحضير منتج «فيتراك».',
   pts:['خطوات مقدَّمة بشكل مبسّط ومرئي','لمسة مرحة تحافظ على اهتمام المشاهدين','يبرز فائدة المنتج بطريقة واضحة وممتعة','نُفّذ أثناء تدريبي في شركة تنتج إعلانات وفيديوهات بالذكاء الاصطناعي']}
 ];
-const CATS_AR = {all:'الكل', agents:'الوكلاء وRAG', vision:'الرؤية الحاسوبية', data:'تحليل البيانات', media:'محتوى بالذكاء الاصطناعي'};
+const CATS_AR = {all:'الكل', agents:'الوكلاء وRAG', n8n:'أتمتة n8n', vision:'الرؤية الحاسوبية', data:'تحليل البيانات', media:'محتوى بالذكاء الاصطناعي'};
 const JOBS_AR = [
  ['متدرب ذكاء اصطناعي توليدي','Think Company','يوليو 2025 – نوفمبر 2025 · القاهرة',['عملت على نماذج الانتشار وأدوات الذكاء الاصطناعي ضمن مبادرات الذكاء التوليدي بالشركة.','جرّبت التوليد بالأوامر والضبط الدقيق (LoRA وPEFT).','قيّمت مخرجات النماذج مع فريق الذكاء الاصطناعي لتحسين جودة التوليد.']],
  ['تدريب عملي في الذكاء الاصطناعي وتحليل البيانات','أكاديمية Instant','15 سبتمبر – 15 أكتوبر 2025 · القاهرة',['نفّذت مشاريع في التحليل المالي وتجزئة أورام المخ والتعرف على لوحات السيارات وتحليل المشاعر وتلخيص النصوص.','طبّقت مسارات عمل كاملة من تنظيف البيانات إلى تدريب النماذج وتقييمها.']],
